@@ -65,7 +65,7 @@
   .doc-workspace, .doc-main-col, .product-item-card, .product-info-side,
   .compare-card, .ritual-card, .academic-bridge-card,
   .acc-panel, .acc-inner, .table-responsive,
-  .product-badge-wrap > *, .ritual-grid > *, .bridge-content {
+  .product-badge-wrap > *, .ritual-grid > *, .bridge-content, .edition-banner-main {
     min-width: 0;
     max-width: 100%;
   }
@@ -553,32 +553,57 @@
     margin-bottom: 10px;
   }
 
-  .price-highlight-row {
+  /* KHUNG PHIÊN BẢN MỘC BẢN & MÙA VỤ (THAY THẾ KHUNG GIÁ) */
+  .edition-banner-box {
     display: flex;
-    align-items: baseline;
-    gap: 8px;
-    margin-bottom: 12px;
-    padding: 10px 14px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 11px 14px;
     background: #FAF7F2;
     border: 1px solid #EFE8DC;
+    border-left: 3.5px solid var(--wine-red);
     border-radius: 6px;
+    margin-bottom: 12px;
     flex-wrap: wrap;
   }
-  .price-num { font-family: 'Playfair Display', Georgia, serif; font-size: 23px; font-weight: 700; color: var(--wine-red); }
-  .price-num.pending { font-size: 18.5px; color: var(--espresso); font-weight: 700; }
-  .price-unit { font-size: 12.4px; color: var(--text-muted); }
-  .price-status {
+  .product-item-card.kim-hoang .edition-banner-box { border-left-color: var(--gold-accent); }
+  .product-item-card.minh-hoang .edition-banner-box { border-left-color: var(--bio-green); }
+
+  .edition-banner-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+  }
+  .edition-banner-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(16px, 1.85vw, 19px);
+    font-weight: 700;
+    color: var(--wine-red);
+    line-height: 1.32;
+  }
+  .product-item-card.kim-hoang .edition-banner-title { color: var(--gold-deep); }
+  .product-item-card.minh-hoang .edition-banner-title { color: var(--bio-green); }
+
+  .edition-banner-sub {
+    font-size: 12.4px;
+    color: var(--text-muted);
+    line-height: 1.48;
+  }
+  .edition-pill {
     font-size: 11px;
     font-weight: 600;
     color: var(--wine-red);
     background: #FAF5EB;
     border: 1px solid rgba(94, 25, 20, 0.25);
-    padding: 2.5px 8px;
+    padding: 3px 10px;
     border-radius: 3px;
-    margin-left: auto;
     white-space: nowrap;
+    flex-shrink: 0;
   }
-  .price-status.green-status { color: var(--bio-green); background: #EFF6F1; border-color: rgba(30, 107, 56, 0.3); }
+  .product-item-card.kim-hoang .edition-pill { color: var(--gold-deep); background: #FBF6E8; border-color: rgba(197, 155, 39, 0.35); }
+  .product-item-card.minh-hoang .edition-pill { color: var(--bio-green); background: #EFF6F1; border-color: rgba(30, 107, 56, 0.3); }
 
   .prod-quote-box {
     background: #FDFBF8;
@@ -988,6 +1013,7 @@
     .ritual-grid { grid-template-columns: 1fr; gap: 12px; }
     .hero-quick-jumps { gap: 6px; }
     .jump-pill-btn { font-size: 11.5px; padding: 6.5px 10px; }
+    .edition-banner-box { align-items: flex-start; }
   }
 
   @media (max-width: 420px) {
@@ -1157,15 +1183,20 @@
             <span class="vi">1. Thượng&nbsp;Hoàng</span>
             <span class="en">1. Thuong&nbsp;Hoang</span>
           </h2>
-          <div class="price-highlight-row">
-            <span class="price-num" id="ui-th-price">700.000&nbsp;đ</span>
-            <span class="price-unit">
-              <span class="vi">/ Hộp 24&nbsp;túi lọc (100g)</span>
-              <span class="en">/ Box of 24&nbsp;filter bags (100g)</span>
-            </span>
-            <span class="price-status" id="ui-th-status">
-              <span class="vi">◈ Phiên Bản Mộc Bản</span>
-              <span class="en">◈ Pure Origin Edition</span>
+          <div class="edition-banner-box">
+            <div class="edition-banner-main">
+              <span class="edition-banner-title">
+                <span class="vi">Phiên Bản Mộc Bản • Hộp 24&nbsp;túi lọc (100g)</span>
+                <span class="en">Pure Origin Edition • 24&nbsp;Filter Bags (100g)</span>
+              </span>
+              <span class="edition-banner-sub">
+                <span class="vi">Phân phối trực tiếp theo mùa thu hái rừng Quảng&nbsp;Ngãi</span>
+                <span class="en">Direct distribution by Quang&nbsp;Ngai wild harvest season</span>
+              </span>
+            </div>
+            <span class="edition-pill">
+              <span class="vi">◈ Tư Vấn Trực Tiếp</span>
+              <span class="en">◈ Direct Consultation</span>
             </span>
           </div>
           <div class="prod-quote-box">
@@ -1255,16 +1286,20 @@
             <span class="vi">2. Kim&nbsp;Hoàng</span>
             <span class="en">2. Kim&nbsp;Hoang</span>
           </h2>
-          <div class="price-highlight-row">
-            <span class="price-num pending">
-              <span class="vi">Chưa công bố</span><span class="en">To Be Announced</span>
-            </span>
-            <span class="price-unit">
-              <span class="vi">/ Thông tin giới thiệu tham khảo</span>
-              <span class="en">/ Reference product profile</span>
-            </span>
-            <span class="price-status">
-              <span class="vi">Đang cập nhật</span><span class="en">Updating</span>
+          <div class="edition-banner-box">
+            <div class="edition-banner-main">
+              <span class="edition-banner-title">
+                <span class="vi">Phiên Bản Chuyên Sâu • Hộp 24&nbsp;túi lọc (100g)</span>
+                <span class="en">Vital Essence Edition • 24&nbsp;Filter Bags (100g)</span>
+              </span>
+              <span class="edition-banner-sub">
+                <span class="vi">Phân phối trực tiếp theo mùa thu hái rừng Quảng&nbsp;Ngãi</span>
+                <span class="en">Direct distribution by Quang&nbsp;Ngai wild harvest season</span>
+              </span>
+            </div>
+            <span class="edition-pill">
+              <span class="vi">◈ Tư Vấn Trực Tiếp</span>
+              <span class="en">◈ Direct Consultation</span>
             </span>
           </div>
           <div class="prod-quote-box">
@@ -1362,16 +1397,20 @@
             <span class="vi">3. Minh&nbsp;Hoàng</span>
             <span class="en">3. Minh&nbsp;Hoang</span>
           </h2>
-          <div class="price-highlight-row">
-            <span class="price-num pending">
-              <span class="vi">Chưa công bố</span><span class="en">To Be Announced</span>
-            </span>
-            <span class="price-unit">
-              <span class="vi">/ Thông tin giới thiệu tham khảo</span>
-              <span class="en">/ Reference product profile</span>
-            </span>
-            <span class="price-status green-status">
-              <span class="vi">Phiên bản tuyển chọn</span><span class="en">Reserve Selection</span>
+          <div class="edition-banner-box">
+            <div class="edition-banner-main">
+              <span class="edition-banner-title">
+                <span class="vi">Phiên Bản Tuyển Chọn • Hộp 24&nbsp;túi lọc (100g)</span>
+                <span class="en">Reserve Selection • 24&nbsp;Filter Bags (100g)</span>
+              </span>
+              <span class="edition-banner-sub">
+                <span class="vi">Phân phối trực tiếp theo mùa thu hái rừng Quảng&nbsp;Ngãi</span>
+                <span class="en">Direct distribution by Quang&nbsp;Ngai wild harvest season</span>
+              </span>
+            </div>
+            <span class="edition-pill">
+              <span class="vi">◈ Tư Vấn Trực Tiếp</span>
+              <span class="en">◈ Direct Consultation</span>
             </span>
           </div>
           <div class="prod-quote-box">
@@ -1450,10 +1489,19 @@
                 <td><span class="vi"><strong>Trà Thảo Mộc Bách&nbsp;Phục Minh&nbsp;Hoàng</strong></span><span class="en"><strong>Bach&nbsp;Phuc Minh&nbsp;Hoang Herbal Tea</strong></span></td>
               </tr>
               <tr>
-                <td><strong><span class="vi">Mức giá tham khảo</span><span class="en">Reference Price</span></strong></td>
-                <td style="color:var(--wine-red); font-weight:700;">700.000&nbsp;đ</td>
-                <td style="color:var(--text-muted); font-style:italic;"><span class="vi">Chưa công bố</span><span class="en">To Be Announced</span></td>
-                <td style="color:var(--text-muted); font-style:italic;"><span class="vi">Chưa công bố</span><span class="en">To Be Announced</span></td>
+                <td><strong><span class="vi">Phiên bản &amp; Mùa vụ</span><span class="en">Edition &amp; Harvest</span></strong></td>
+                <td>
+                  <span style="color:var(--wine-red); font-weight:700;"><span class="vi">Phiên Bản Mộc Bản</span><span class="en">Pure Origin Edition</span></span><br>
+                  <span style="font-size:11.8px;color:var(--text-muted);"><span class="vi">Phân phối trực tiếp theo mùa</span><span class="en">Direct seasonal distribution</span></span>
+                </td>
+                <td>
+                  <span style="color:var(--gold-deep); font-weight:700;"><span class="vi">Phiên Bản Chuyên Sâu</span><span class="en">Vital Essence Edition</span></span><br>
+                  <span style="font-size:11.8px;color:var(--text-muted);"><span class="vi">Phân phối trực tiếp theo mùa</span><span class="en">Direct seasonal distribution</span></span>
+                </td>
+                <td>
+                  <span style="color:var(--bio-green); font-weight:700;"><span class="vi">Phiên Bản Tuyển Chọn</span><span class="en">Reserve Selection</span></span><br>
+                  <span style="font-size:11.8px;color:var(--text-muted);"><span class="vi">Phân phối trực tiếp theo mùa</span><span class="en">Direct seasonal distribution</span></span>
+                </td>
               </tr>
               <tr>
                 <td><strong><span class="vi">Thành phần &amp; Quy cách</span><span class="en">Ingredients &amp; Box</span></strong></td>
