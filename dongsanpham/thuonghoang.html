@@ -66,7 +66,7 @@
   .content-block-card, .acc-panel, .acc-inner, .table-responsive,
   .wellness-2col > *, .bioactive-grid-3 > *, .sensory-grid-3 > *,
   .ritual-grid-4 > *, .ref-grid-3 > *, .badge-grid-4 > *,
-  .block-header-text, .monograph-bridge-text {
+  .block-header-text, .monograph-bridge-text, .edition-banner-main {
     min-width: 0;
     max-width: 100%;
   }
@@ -456,29 +456,48 @@
     margin-bottom: 10px;
   }
 
-  .price-banner-box {
+  /* KHUNG PHIÊN BẢN MỘC BẢN & MÙA VỤ (THAY THẾ KHUNG GIÁ) */
+  .edition-banner-box {
     display: flex;
-    align-items: baseline;
-    gap: 8px;
-    padding: 10px 14px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 11px 14px;
     background: #FAF7F2;
     border: 1px solid #EFE8DC;
+    border-left: 3.5px solid var(--wine-red);
     border-radius: 6px;
     margin-bottom: 12px;
     flex-wrap: wrap;
   }
-  .price-value { font-family: 'Playfair Display', Georgia, serif; font-size: 24px; font-weight: 700; color: var(--wine-red); }
-  .price-spec-note { font-size: 12.4px; color: var(--text-muted); }
+  .edition-banner-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+  }
+  .edition-banner-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(16.5px, 1.9vw, 19.5px);
+    font-weight: 700;
+    color: var(--wine-red);
+    line-height: 1.32;
+  }
+  .edition-banner-sub {
+    font-size: 12.4px;
+    color: var(--text-muted);
+    line-height: 1.48;
+  }
   .edition-pill {
-    margin-left: auto;
     font-size: 11px;
     font-weight: 600;
     color: var(--wine-red);
     background: #FAF5EB;
     border: 1px solid rgba(94, 25, 20, 0.25);
-    padding: 2.5px 9px;
+    padding: 3px 10px;
     border-radius: 3px;
     white-space: nowrap;
+    flex-shrink: 0;
   }
 
   .quote-banner {
@@ -985,6 +1004,7 @@
       width: 100%; white-space: normal; text-align: center !important; line-height: 1.4;
     }
     .monograph-bridge-box { flex-direction: column; align-items: stretch; }
+    .edition-banner-box { align-items: flex-start; }
   }
 
   @media (max-width: 420px) {
@@ -1124,15 +1144,20 @@
               <span class="en">1. Thuong&nbsp;Hoang (Bach&nbsp;Phuc Thuong&nbsp;Hoang Herbal&nbsp;Tea)</span>
             </h1>
 
-            <div class="price-banner-box">
-              <span class="price-value" id="ui-price-val">700.000&nbsp;đ</span>
-              <span class="price-spec-note">
-                <span class="vi">/ Hộp 24&nbsp;túi lọc (100g)</span>
-                <span class="en">/ Box of 24&nbsp;filter bags (100g)</span>
-              </span>
+            <div class="edition-banner-box">
+              <div class="edition-banner-main">
+                <span class="edition-banner-title">
+                  <span class="vi">Phiên Bản Mộc Bản • Hộp 24&nbsp;túi lọc (100g)</span>
+                  <span class="en">Pure Origin Edition • 24&nbsp;Filter Bags (100g)</span>
+                </span>
+                <span class="edition-banner-sub">
+                  <span class="vi">Phân phối trực tiếp theo mùa thu hái rừng Quảng&nbsp;Ngãi</span>
+                  <span class="en">Direct distribution by Quang&nbsp;Ngai wild harvest season</span>
+                </span>
+              </div>
               <span class="edition-pill">
-                <span class="vi">◈ Phiên Bản Mộc Bản</span>
-                <span class="en">◈ Pure Origin Edition</span>
+                <span class="vi">◈ Tư Vấn Trực Tiếp</span>
+                <span class="en">◈ Direct Consultation</span>
               </span>
             </div>
 
@@ -1583,7 +1608,7 @@
           <span style="color:var(--gold-primary);">❖</span>
         </div>
         <ul class="toc-list">
-          <li><button type="button" class="toc-jump-btn active" data-target="khoi-tong-quan" onclick="jumpToSection('khoi-tong-quan')"><span class="toc-roman">◈</span><span><span class="vi">Tổng quan &amp; Giá tham khảo</span><span class="en">Overview &amp; Price</span></span></button></li>
+          <li><button type="button" class="toc-jump-btn active" data-target="khoi-tong-quan" onclick="jumpToSection('khoi-tong-quan')"><span class="toc-roman">◈</span><span><span class="vi">Tổng quan &amp; Quy cách</span><span class="en">Overview &amp; Specs</span></span></button></li>
           <li><button type="button" class="toc-jump-btn" data-target="khoi-duong-sinh" onclick="jumpToSection('khoi-duong-sinh')"><span class="toc-roman">1</span><span><span class="vi">Góc nhìn dưỡng sinh &amp; So sánh</span><span class="en">Wellness Perspective</span></span></button></li>
           <li><button type="button" class="toc-jump-btn" data-target="khoi-hoat-chat" onclick="jumpToSection('khoi-hoat-chat')"><span class="toc-roman">2</span><span><span class="vi">3 Nhóm dưỡng chất tự nhiên</span><span class="en">3 Natural Bioactives</span></span></button></li>
           <li><button type="button" class="toc-jump-btn" data-target="khoi-ky-nghe" onclick="jumpToSection('khoi-ky-nghe')"><span class="toc-roman">3</span><span><span class="vi">Kỹ nghệ mộc bản &amp; 3 tầng vị</span><span class="en">Craft &amp; 3 Taste Stages</span></span></button></li>
@@ -1644,7 +1669,7 @@
       <button type="button" class="drawer-close" onclick="closeTocDrawer()" aria-label="Đóng">✕</button>
     </div>
     <ul class="toc-list">
-      <li><button type="button" class="toc-jump-btn" data-target="khoi-tong-quan" onclick="jumpToSection('khoi-tong-quan')"><span class="toc-roman">◈</span><span><span class="vi">Tổng quan &amp; Giá tham khảo</span><span class="en">Overview &amp; Price</span></span></button></li>
+      <li><button type="button" class="toc-jump-btn" data-target="khoi-tong-quan" onclick="jumpToSection('khoi-tong-quan')"><span class="toc-roman">◈</span><span><span class="vi">Tổng quan &amp; Quy cách</span><span class="en">Overview &amp; Specs</span></span></button></li>
       <li><button type="button" class="toc-jump-btn" data-target="khoi-duong-sinh" onclick="jumpToSection('khoi-duong-sinh')"><span class="toc-roman">1</span><span><span class="vi">Góc nhìn dưỡng sinh &amp; So sánh</span><span class="en">Wellness Perspective</span></span></button></li>
       <li><button type="button" class="toc-jump-btn" data-target="khoi-hoat-chat" onclick="jumpToSection('khoi-hoat-chat')"><span class="toc-roman">2</span><span><span class="vi">3 Nhóm dưỡng chất tự nhiên</span><span class="en">3 Natural Bioactives</span></span></button></li>
       <li><button type="button" class="toc-jump-btn" data-target="khoi-ky-nghe" onclick="jumpToSection('khoi-ky-nghe')"><span class="toc-roman">3</span><span><span class="vi">Kỹ nghệ mộc bản &amp; 3 tầng vị</span><span class="en">Craft &amp; 3 Taste Stages</span></span></button></li>
@@ -1708,17 +1733,12 @@
   <!-- ================= CẤU HÌNH ẢNH, MỤC LỤC SCROLLSPY, ACCORDION, CHỐNG RỚT CHỮ & SONG NGỮ ================= -->
   <script>
     const CAU_HINH_THUONG_HOANG = {
-      linkAnhHop: "https://lh3.googleusercontent.com/d/12czUcZq3QR8l9qFE91dp3l603FwCzcL5",
-      giaHienThi: "700.000\u00A0đ"
+      linkAnhHop: "https://lh3.googleusercontent.com/d/12czUcZq3QR8l9qFE91dp3l603FwCzcL5"
     };
 
     const imgEl = document.getElementById("img-main-thuong-hoang");
     if (imgEl && CAU_HINH_THUONG_HOANG.linkAnhHop) {
       imgEl.src = CAU_HINH_THUONG_HOANG.linkAnhHop;
-    }
-    const priceEl = document.getElementById("ui-price-val");
-    if (priceEl && CAU_HINH_THUONG_HOANG.giaHienThi) {
-      priceEl.textContent = CAU_HINH_THUONG_HOANG.giaHienThi;
     }
 
     function syncNavPadding() {
