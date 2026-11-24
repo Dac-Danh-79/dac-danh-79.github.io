@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Trang Chủ -->
+  <url>
+    <loc>https://trathaomocbachphuc.vn/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Danh Mục & 3 Dòng Trà Nấm Linh Chi Rừng -->
+  <url>
+    <loc>https://trathaomocbachphuc.vn/dongsanpham</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://trathaomocbachphuc.vn/dongsanpham/thuonghoang</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://trathaomocbachphuc.vn/dongsanpham/kimhoang</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://trathaomocbachphuc.vn/dongsanpham/minhhoang</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Hành Trình Thu Hái Nấm Linh Chi Rừng Quảng Ngãi -->
+  <url>
+    <loc>https://trathaomocbachphuc.vn/thuhai</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Tài Liệu Chuyên Khảo Khoa Học Nấm Linh Chi -->
+  <url>
+    <loc>https://trathaomocbachphuc.vn/tailieu</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://trathaomocbachphuc.vn/tailieu/tuanhoan</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trathaomocbachphuc.vn/tailieu/tebao</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trathaomocbachphuc.vn/tailieu/chuyenhoa</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Cơ Chế Tự Chữa Lành & Khoa Học Dưỡng Sinh -->
+  <url>
+    <loc>https://trathaomocbachphuc.vn/suckhoe</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://trathaomocbachphuc.vn/suckhoe/noicanbang</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trathaomocbachphuc.vn/suckhoe/tuchualanh</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trathaomocbachphuc.vn/suckhoe/thichnghi</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trathaomocbachphuc.vn/suckhoe/nhipsinhhoc</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tra Cứu Mộc Bản & Liên Hệ -->
+  <url>
+    <loc>https://trathaomocbachphuc.vn/tracuu</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://trathaomocbachphuc.vn/lienhe</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+</urlset>

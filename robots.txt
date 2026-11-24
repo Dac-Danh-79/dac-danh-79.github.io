@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Bản đồ trang web Trà Thảo Mộc Bách Phục
+Sitemap: https://trathaomocbachphuc.vn/sitemap.xml
